@@ -1,11 +1,12 @@
 import React from 'react';
 import Main from './components/Main';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Main />
-    </div>
+    </GlobalProvider>
   );
 }
 
