@@ -14,10 +14,10 @@ export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     // actions
-    function addEvent(transaction) {
+    function addEvent(event) {
         dispatch({
             type: 'ADD_EVENT',
-            payload: transaction
+            payload: event
         });
     }
 
