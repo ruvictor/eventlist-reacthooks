@@ -21,6 +21,10 @@ const Main = () => {
         }
 
         addEvent(newEvent);
+
+        // restet the form
+        setEvent('');
+        setTime('');
       }
 
     return (
@@ -36,8 +40,8 @@ const Main = () => {
                 </ul>
                 <div className="AddEvent">
                     <form onSubmit={onSubmit}>
-                        <input className="eventFiled" type="text" onChange={(e) => setEvent(e.target.value)} name="newevent" placeholder="New Event" />
-                        <input className="eventTime" type="text" onChange={(e) => setTime(e.target.value)} name="newevent" placeholder="Time" />
+                        <input className="eventFiled" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />
+                        <input className="eventTime" value={time} type="text" onChange={(e) => setTime(e.target.value)} placeholder="Time" />
                         <button className="submitBtn">Add Event</button>
                     </form>
                 </div>
